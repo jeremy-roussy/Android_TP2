@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">TP2</string>
     <string name="click_me">Cliquez moi</string>
+    <string name="you_click">Vous avez cliqué %d fois</string>
     <string name="nombre_1">Nombre 1</string>
     <string name="nombre_2">Nombre 2</string>
     <string name="calculer">Calculer</string>

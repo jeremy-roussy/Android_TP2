@@ -11,10 +11,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/nombre_1"
+        android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:inputType="numberDecimal"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/field_2"
@@ -22,10 +22,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:hint="@string/nombre_2"
+        android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/field_1"
-        android:inputType="numberDecimal"/>
+        app:layout_constraintTop_toBottomOf="@id/field_1" />
 
     <TextView
         android:id="@+id/resultat"
@@ -37,7 +37,7 @@
         app:layout_constraintTop_toBottomOf="@id/field_2"
         tools:text="Le résultat s'afficher ici" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_calculer"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

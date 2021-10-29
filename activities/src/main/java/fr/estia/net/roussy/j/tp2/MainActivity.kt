@@ -2,35 +2,49 @@ package fr.estia.net.roussy.j.tp2
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import fr.estia.net.roussy.j.tp2.databinding.MainActivityBinding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var clickButton: Button
-    private lateinit var computeButton: Button
-    private lateinit var countingText: TextView
+    private lateinit var binding: MainActivityBinding
     private var nbClick = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_activity)
-        clickButton = findViewById(R.id.btn_click_me)
-        computeButton = findViewById(R.id.btn_compute)
-        countingText = findViewById(R.id.counting_text)
+        binding = MainActivityBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        clickButton.setOnClickListener {
-            nbClick++
-            val newText = "Vous avez cliquez $nbClick fois"
-            countingText.text = newText
-            if (nbClick == 5) {
-                clickButton.isEnabled = false
+        with(binding) {
+            btnClickMe.setOnClickListener {
+                nbClick++
+                countingText.text = getString(R.string.you_click, nbClick)
+                btnClickMe.isEnabled = nbClick <= 4
+            }
+
+            btnCompute.setOnClickListener {
+                val intent = Intent(baseContext, ComputeActivity::class.java)
+                startActivity(intent)
+            }
+        }
+    }
+
+    /*
+    // ********************* Fonction avec implémentation de l'interface ********************* //
+    override fun onClick(view: View) {
+        when(view.id) {
+            R.id.clickButton -> {
+                nbClick++
+                countingText.text = getString(R.string.you_click, nbClick)
+                clickButton.isEnabled = nbClick <= 4
+            }
+
+            R.id.computeButton -> {
+                val intent = Intent(baseContext, ComputeActivity::class.java)
+                startActivity(intent)
             }
         }
 
-        computeButton.setOnClickListener {
-            val intent = Intent(baseContext, ComputeActivity::class.java)
-            startActivity(intent)
-        }
-    }
+
+    */
 }
