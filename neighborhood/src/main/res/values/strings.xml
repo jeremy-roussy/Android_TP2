@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">TP3</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+    <string name="confirm">Confirmer</string>
+    <string name="are_you_sure">Êtes vous sûr de vouloir supprimer cette personne ?</string>
+    <string name="create">Créer</string>
+    <string name="about_me">A propos de moi</string>
+    <string name="need_about_me">Des informations sont requises</string>
+    <string name="address">Adresse</string>
+    <string name="need_address">Email requis</string>
+    <string name="error_address">Email invalide</string>
+    <string name="website">Site web</string>
+    <string name="need_website">Site web</string>
+    <string name="error_url">URL invalide</string>
+    <string name="phone">Telephone</string>
+    <string name="need_phone">numéro de téléphone requis</string>
+    <string name="error_phone">numéro de téléphone invalide</string>
+    <string name="name">Nom</string>
+    <string name="need_username">Nom d\'utilisateur requis</string>
+    <string name="image">Image</string>
+    <string name="need_image">Une image est requise</string>
+    <string name="user_image">Image de l\'utilisateur</string>
+    <string name="bin_image">Logo de suppression d\'utilisateur</string>
+    <string name="neighbors_list">Liste des voisins</string>
+    <string name="new_neighbor">Nouveau voisin</string>
+</resources>
